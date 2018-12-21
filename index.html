@@ -59,18 +59,31 @@
             var left = document.querySelector("#left");
             var right = document.querySelector("#right");
 
-            up.addEventListener("click", ()=>{
+            up.addEventListener("touchstart", ()=>{
                 movement("up");
             });
-            down.addEventListener("click", ()=>{
+            up.addEventListener("touchend", ()=>{
+                movement("stop");
+            });
+            down.addEventListener("touchstart", ()=>{
                 movement("down");
             });
-            left.addEventListener("click", ()=>{
+            down.addEventListener("touchend", ()=>{
+                movement("stop");
+            });
+            left.addEventListener("touchstart", ()=>{
                 movement("left");
             });
-            right.addEventListener("click", ()=>{
+             left.addEventListener("touchend", ()=>{
+                movement("stop");
+            });
+            right.addEventListener("touchstart", ()=>{
                 movement("right");
             });
+            right.addEventListener("touchend", ()=>{
+                movement("stop");
+            });
+
         </script>
     </body>
 </html>

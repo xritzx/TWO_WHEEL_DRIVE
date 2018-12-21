@@ -97,12 +97,13 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   server.on("/", handleRoot);
+  server.on("/stop", stop);
   server.on("/up", up);
   server.on("/down", down);
   server.on("/right", right);
   server.on("/left", left);
   server.on("/keth1", keth1);
-  server.on("/keth", keth2);
+  server.on("/keth2", keth2);
   server.begin();
   Serial.println("Server is listening on Port 80");
 }
