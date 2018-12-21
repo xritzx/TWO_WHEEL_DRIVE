@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moto</title>
+        <style>
+            html    {
+                height: 100%;
+            }
+
+            body    {
+                background: #2c3e50;
+                height: 100%;
+            }
+
+            .stl    {
+                color: antiquewhite;
+                font-size: 50px;
+                border: 5px wheat solid;
+                border-radius: 10%;
+                margin: 100px;
+                transform: rotate(90deg);
+            }
+
+            #down   {
+                padding: 100px;
+                position: absolute;
+            }
+            #up    {
+                float: right;
+                padding: 100px 150px;
+            }
+
+            #left  {
+                position: fixed;
+                bottom: 400px;
+                padding: 100px;
+            }
+
+            #right  {
+                position: fixed;
+                bottom: 10px;
+                padding: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span id="down" class="stl">DOWN</span>
+            <span id="up" class="stl">UP</span>
+        </div>
+        <div>
+            <span id="left" class="stl">LEFT</span>
+            <span id="right" class="stl">RIGHT</span>
+        </div>
+
+        <script>
+            var up = document.querySelector("#up");
+            var down = document.querySelector("#down");
+            var left = document.querySelector("#left");
+            var right = document.querySelector("#right");
+
+            up.addEventListener("click", ()=>{
+                movement("up");
+            });
+            down.addEventListener("click", ()=>{
+                movement("down");
+            });
+            left.addEventListener("click", ()=>{
+                movement("left");
+            });
+            right.addEventListener("click", ()=>{
+                movement("right");
+            });
+        </script>
+    </body>
+</html>
